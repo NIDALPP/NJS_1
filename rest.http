@@ -1,0 +1,36 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzNkOWNjNGFiYjk1YThlZDcxZTdiOWQiLCJpYXQiOjE3MzIxMDEwMTAsImV4cCI6MTczMjEwMTAzMCwiYXVkIjoiNjczZDljYzRhYmI5NWE4ZWQ3MWU3YjlkIiwiaXNzIjoiYXBwbGUuY29tIn0.JTT7j67hpxLV8slDNg3V0fEEaigWFw3p3AFsyS187Xg
+
+###
+POST   http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email":"npo@gmsil.com",
+    "password": "12345678"
+}
+
+###
+POST  http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email":"npo@gmsil.com",
+    "password": "12345678"
+}
+
+###refresh token route
+POST  http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzNkOWNjNGFiYjk1YThlZDcxZTdiOWQiLCJpYXQiOjE3MzIxMDA5NTgsImV4cCI6MTc2MzY1ODU1OCwiYXVkIjoiNjczZDljYzRhYmI5NWE4ZWQ3MWU3YjlkIiwiaXNzIjoiYXBwbGUuY29tIn0.COefKFD2YWFM7gKExdEWdruBV9z0NuGUeZV19ZJnCCQ"
+}
+
+###
+DELETE   http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzNkOWNjNGFiYjk1YThlZDcxZTdiOWQiLCJpYXQiOjE3MzIxMDE0MzMsImV4cCI6MTc2MzY1OTAzMywiYXVkIjoiNjczZDljYzRhYmI5NWE4ZWQ3MWU3YjlkIiwiaXNzIjoiYXBwbGUuY29tIn0.bW2bvPN-fJnc5ejIXnqujAyU18OOaLEg0SCZ2GTjjrU"
+}
